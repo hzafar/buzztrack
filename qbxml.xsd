@@ -1,0 +1,82 @@
+<?xml version="1.0">
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="qbxml"
+        elementFormDefault="qualified">
+    <xs:element name="packet">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="tossup" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element name="category" type="xs:string"/>
+                            <xs:element name="subcategory" type="xs:string" minOccurs="0"/>
+                            <xs:element name="subject" type="xs:string" minOccurs="0"/>
+                            <xs:element name="author" type="xs:string" minOccurs="0"/>
+                            <xs:element name="question">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element name="leadin">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element name="clue" type="xs:string" maxOccurs="unbounded">
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="middle">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element name="clue" type="xs:string" maxOccurs="unbounded">
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="giveaway">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element name="clue" type="xs:string" maxOccurs="unbounded">
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="answerline">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element name="accepted">
+                                            <xs:complexType mixed="true">
+                                                <xs:all>
+                                                    <xs:element name="required" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="alternates">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element name="alternate" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType mixed="true">
+                                                            <xs:all>
+                                                                <xs:element name="required" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                                                            </xs:all>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs>element>
+                                        <xs:element name="prompts">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element name="prompt" minOccurs="0" maxOccurs="unbounded"/>
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs>element>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:all>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
