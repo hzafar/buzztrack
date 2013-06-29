@@ -57,7 +57,7 @@ $(document).ready(function() {
         }
     });
 
-    $("#genstats").click(function(event) {
+    $("a.genstats").click(function(event) {
         generateStats();
         RESULTS = "<stats>";
         RESULTS += printAllStats(tossups, "points");

@@ -11,7 +11,7 @@
     <script src="../REQUIRE/jquery-1.9.1.js"></script>
     <script src="../REQUIRE/buzztrack.js"></script>
     <h1><xsl:value-of select="@name"/></h1>
-    <a href="#" id="genstats">generate stats</a>
+    <a href="#" class="genstats">generate stats</a>
     <xsl:comment>
     <a href="#" id="leadins">leadins</a><xsl:text> </xsl:text>
     <a href="#" id="middles">middle clues</a><xsl:text> </xsl:text>
@@ -27,7 +27,7 @@
             <xsl:apply-templates select="tossup"/>
         </ol>
     </div>
-    <div id="resultsdiv"></div>
+    <a href="#" class="genstats">generate stats</a>
     </body>
     </html>
 </xsl:template>
